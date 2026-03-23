@@ -18,7 +18,7 @@
             <input class="border-2 p-1" type="password" name="password" placeholder="Password">
             <input class="border-2 p-1" type="password" name="password_confirmation" placeholder="Confirm Password">
 
-            <button class="border-2 p-1" type="submit">Register</button>
+            <button class="border-2 p-1 cursor-pointer font-bold" type="submit">Register</button>
         </form>
 
     </div>
