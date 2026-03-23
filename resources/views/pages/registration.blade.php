@@ -13,6 +13,11 @@
         
         <form class="grid gap-4" action="/register" method="post">
             @csrf
+
+
+            @error('usernameAlreadyExists')
+                <p>{{ $message }}</p>
+            @enderror
             
             @error('username')
             <p>{{ $message }}</p>
