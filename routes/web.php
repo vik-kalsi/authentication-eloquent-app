@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LogOutController;
 use App\Http\Controllers\UserListController;
+use App\Http\Controllers\ChangePasswordController;
 
 
 Route::get('/', function () {
@@ -28,6 +29,10 @@ Route::get('/logout', [LogOutController::class, "LogOutUser"]);
 
 Route::get('/listofusers', [UserListController::class, "OpenUserListPage"])
 ->middleware('auth');
+
+Route::get('/changepassword', [ChangePasswordController::class, "OpenChangePasswordPage"])
+->middleware('auth');
+Route::post('/changepassword', [ChangePasswordController::class, "ChangePassword"]);
 
 Route::get('/dashboard', [DashboardController::class, "OpenDashboard"])
 ->middleware('auth');

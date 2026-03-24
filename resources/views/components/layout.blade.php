@@ -40,6 +40,10 @@
             @endif
 
             @if(auth()->user())
+                <li class="px-2"><a class="hover:font-bold" href="/changepassword">Change Password</a></li>
+            @endif
+
+            @if(auth()->user())
                 <li class="px-2"><a class="hover:font-bold" href="/logout">Logout</a></li>
             @endif
         </ul>
