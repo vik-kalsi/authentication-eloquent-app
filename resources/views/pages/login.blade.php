@@ -19,6 +19,10 @@
                 <p>{{ session('registerSuccess') }}</p>
             @endif
 
+            @if (session('LogOutSuccess'))
+                <p>{{ session('LogOutSuccess') }}</p>
+            @endif
+
 
             @error('incorrectCredenials')
                 <p>{{ $message }}</p>
