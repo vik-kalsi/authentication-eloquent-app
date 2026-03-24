@@ -18,7 +18,10 @@
 
     <div class="mb-4">
         <ul class="border-2 flex py-2 justify-center">
-            <li class="px-2"><a class="hover:font-bold" href="/">Homepage</a></li>
+            
+            @if(!auth()->user())
+                <li class="px-2"><a class="hover:font-bold" href="/">Homepage</a></li>
+            @endif
 
             @if(!auth()->user())
                 <li class="px-2"><a class="hover:font-bold" href="/login">Login</a></li>

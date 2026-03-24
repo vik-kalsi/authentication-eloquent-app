@@ -12,7 +12,7 @@
     <h1> Hello, {{ auth()->user()->username }} </h1>
 
     <div class="mt-4">
-        <p>You have logged in - Username and Password is correct</p>
+        <p>You have logged in</p>
     </div>
 
     

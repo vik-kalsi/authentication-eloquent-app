@@ -11,7 +11,7 @@ use App\Http\Controllers\UserListController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('guest');
 
 
 Route::get('/login', [LoginController::class, 'OpenLoginPage'])
