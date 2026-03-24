@@ -14,11 +14,14 @@ Route::get('/', function () {
 });
 
 
-Route::get('/login', [LoginController::class, 'OpenLoginPage'])->name('login');
+Route::get('/login', [LoginController::class, 'OpenLoginPage'])
+->middleware('guest')
+->name('login');
 Route::post('/login', [LoginController::class, 'LoginUser']);
 
 
-Route::get('/register', [RegisterController::class, "OpenRegistrationPage"]);
+Route::get('/register', [RegisterController::class, "OpenRegistrationPage"])
+->middleware('guest');
 Route::post('/register', [RegisterController::class, "RegisterAccount"]);
 
 Route::get('/logout', [LogOutController::class, "LogOutUser"]);
