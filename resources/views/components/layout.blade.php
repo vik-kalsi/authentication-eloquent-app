@@ -19,8 +19,26 @@
     <div class="mb-4">
         <ul class="border-2 flex py-2 justify-center">
             <li class="px-2"><a class="hover:font-bold" href="/">Homepage</a></li>
-            <li class="px-2"><a class="hover:font-bold" href="/login">Login</a></li>
-            <li class="px-2"><a class="hover:font-bold" href="/register">Register</a></li>
+
+            @if(!auth()->user())
+                <li class="px-2"><a class="hover:font-bold" href="/login">Login</a></li>
+            @endif
+
+            @if(!auth()->user())
+                <li class="px-2"><a class="hover:font-bold" href="/register">Register</a></li>
+            @endif
+
+            @if(auth()->user())
+                <li class="px-2"><a class="hover:font-bold" href="/dashboard">Dashboard</a></li>
+            @endif
+
+            @if(auth()->user())
+                <li class="px-2"><a class="hover:font-bold" href="/listofusers">List of Users</a></li>
+            @endif
+
+            @if(auth()->user())
+                <li class="px-2"><a class="hover:font-bold" href="/logout">Logout</a></li>
+            @endif
         </ul>
     </div>
     
