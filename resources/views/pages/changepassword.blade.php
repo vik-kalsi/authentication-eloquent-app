@@ -22,6 +22,16 @@
             @error('newpassword')
             <p>{{ $message }}</p>
             @enderror
+
+            @error('incorrectCurrentPassword')
+                <p>{{ $message }}</p>
+            @enderror
+
+
+            @if (session('passwordChangeSuccess'))
+                <p>{{ session('passwordChangeSuccess') }}</p>
+            @endif
+
             
             <input class="border-2 p-1" type="password" name="currentpassword" placeholder="Current Username">
             <input class="border-2 p-1" type="password" name="newpassword" placeholder="New Password">
