@@ -44,6 +44,10 @@
             @endif
 
             @if(auth()->user())
+                <li class="px-2"><a class="hover:font-bold" href="/deleteaccount">Delete Account</a></li>
+            @endif
+
+            @if(auth()->user())
                 <li class="px-2"><a class="hover:font-bold" href="/logout">Logout</a></li>
             @endif
         </ul>

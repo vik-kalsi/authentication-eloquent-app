@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LogOutController;
 use App\Http\Controllers\UserListController;
 use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\DeleteAccountController;
 
 
 #Default page
@@ -45,6 +46,12 @@ Route::get('/changepassword', [ChangePasswordController::class, "OpenChangePassw
 ->middleware('auth');
 
 Route::post('/changepassword', [ChangePasswordController::class, "ChangePassword"]);
+
+
+#Delete account page
+Route::get('/deleteaccount', [DeleteAccountController::class, "OpenDeleteAccountPage"])
+->middleware('auth');
+
 
 
 #Dashboard page
