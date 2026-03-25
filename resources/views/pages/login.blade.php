@@ -23,6 +23,10 @@
                 <p>{{ session('LogOutSuccess') }}</p>
             @endif
 
+            @if (session('AccountDeletedSuccess'))
+                <p>{{ session('AccountDeletedSuccess') }}</p>
+            @endif
+
 
             @error('incorrectCredenials')
                 <p>{{ $message }}</p>

@@ -45,13 +45,16 @@ Route::get('/listofusers', [UserListController::class, "OpenUserListPage"])
 Route::get('/changepassword', [ChangePasswordController::class, "OpenChangePasswordPage"])
 ->middleware('auth');
 
-Route::post('/changepassword', [ChangePasswordController::class, "ChangePassword"]);
+Route::post('/changepassword', [ChangePasswordController::class, "ChangePassword"])
+->middleware('auth');;
 
 
 #Delete account page
 Route::get('/deleteaccount', [DeleteAccountController::class, "OpenDeleteAccountPage"])
 ->middleware('auth');
 
+Route::delete('/deleteaccount', [DeleteAccountController::class, "DeleteAccount"])
+->middleware('auth');
 
 
 #Dashboard page
